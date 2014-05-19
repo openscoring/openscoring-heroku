@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>org.openscoring</groupId>
 			<artifactId>server</artifactId>
-			<version>1.1.1</version>
+			<version>1.1.2</version>
 		</dependency>
 	</dependencies>
 
