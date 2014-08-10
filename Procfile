@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp "target/lib/*" org.openscoring.server.Main --port $PORT --deploy-dir "pmml"
+web: java $JAVA_OPTS -cp "target/lib/*" org.openscoring.server.Main --port $PORT --model-dir "pmml"

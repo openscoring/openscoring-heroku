@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>org.openscoring</groupId>
 			<artifactId>server</artifactId>
-			<version>1.1.4</version>
+			<version>1.1.5</version>
 		</dependency>
 	</dependencies>
 
@@ -55,14 +55,6 @@
 				</executions>
 				<configuration>
 					<outputDirectory>${project.build.directory}/lib</outputDirectory>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.1</version>
-				<configuration>
-					<localCheckout>true</localCheckout>
-					<pushChanges>false</pushChanges>
 				</configuration>
 			</plugin>
 		</plugins>
