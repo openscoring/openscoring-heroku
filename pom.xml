@@ -35,26 +35,32 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.openscoring</groupId>
-			<artifactId>server</artifactId>
-			<version>1.1.5</version>
+			<artifactId>openscoring-client</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openscoring</groupId>
+			<artifactId>openscoring-server</artifactId>
+			<version>1.2.1</version>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.8</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.3</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
 						<goals>
-							<goal>copy-dependencies</goal>
+							<goal>shade</goal>
 						</goals>
 					</execution>
 				</executions>
 				<configuration>
-					<outputDirectory>${project.build.directory}/lib</outputDirectory>
+					<finalName>heroku-executable-${project.version}</finalName>
 				</configuration>
 			</plugin>
 		</plugins>

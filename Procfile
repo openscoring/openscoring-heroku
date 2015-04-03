@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp "target/lib/*" org.openscoring.server.Main --port $PORT --model-dir "pmml"
+web: java $JAVA_OPTS -cp "target/heroku-executable-1.0-SNAPSHOT.jar" org.openscoring.heroku.Main --port $PORT --model-dir "pmml"
