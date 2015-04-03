@@ -41,7 +41,7 @@ Deploying a file `DecisionTreeIris.pmml`:
 ```
 cp ~/work/DecisionTreeIris.pmml pmml/DecisionTreeIris.pmml
 git add pmml/DecisionTreeIris.pmml
-git commit -m "Added a decision tree model for the iris dataset"
+git commit -m "Added a model"
 git push heroku master
 ```
 
@@ -50,7 +50,7 @@ The name of the file (without file name extension(s), if any) becomes the model 
 Undeploying a file `DecisionTreeIris.pmml`:
 ```
 git rm pmml/DecisionTreeIris.pmml
-git commit -m "Removed a decision tree model for the iris dataset"
+git commit -m "Removed a model"
 git push heroku master
 ```
 

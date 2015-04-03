@@ -35,25 +35,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.openscoring</groupId>
-			<artifactId>openscoring-client</artifactId>
-			<version>1.2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.openscoring</groupId>
 			<artifactId>openscoring-server</artifactId>
-			<version>1.2.1</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.jpmml</groupId>
-					<artifactId>pmml-evaluator</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jpmml</groupId>
-			<artifactId>pmml-evaluator</artifactId>
-			<version>1.1.17</version>
+			<version>1.2.2</version>
 		</dependency>
 	</dependencies>
 
@@ -61,18 +44,18 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.3</version>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
 						<goals>
-							<goal>shade</goal>
+							<goal>copy-dependencies</goal>
 						</goals>
 					</execution>
 				</executions>
 				<configuration>
-					<finalName>heroku-executable-${project.version}</finalName>
+					<outputDirectory>${project.build.directory}/lib</outputDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
