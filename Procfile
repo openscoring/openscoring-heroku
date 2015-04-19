@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp "target/lib/*" org.openscoring.server.Main --port $PORT --model-dir "pmml"
+web: java $JAVA_OPTS -Dconfig.file=application.conf -Djava.util.logging.config.file=logging.properties -cp "target/lib/*" org.openscoring.server.Main --port $PORT --model-dir "pmml"
